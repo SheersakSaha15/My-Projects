@@ -170,8 +170,8 @@ body {
 .personal-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 20px;
     margin-bottom: 10px;
     padding-top: 40px;
     color: #1a1a1a;
@@ -183,6 +183,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: b;
 }
 
 .map {
@@ -193,14 +194,14 @@ body {
 }
 
 .phone {
-    width: 50px;
+    width: 40px;
     height: auto;
     margin-left: 60px;
     margin-top: 0;
 }
 
 .mail {
-    width: 60px;
+    width: 45px;
     height: auto;
     margin-left: 60px;
     margin-top: 0;
