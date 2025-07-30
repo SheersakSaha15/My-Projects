@@ -97,24 +97,6 @@ body {
     width: 100%;
 }
 
-.fn {
-    font-size: 35px;
-    color: #1a1a1a;
-    font-family: 'Goldman', sans-serif;
-    padding-left: 30px;
-    margin-left: 60px;
-    margin-top: -60px;
-}
-
-.intro {
-    font-size: 16.5px;
-    margin-left: 95px;
-    margin-top: -30px;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    font-weight: 530;
-}
-
 .about-me {
     display: flex;
     font-size: 40px;
@@ -167,6 +149,32 @@ body {
     z-index: -5;
 }
 
+.gist {
+    display: flex;
+}
+
+.fn {
+    display: flex;
+    font-size: 35px;
+    color: #1a1a1a;
+    font-family: 'Goldman', sans-serif;
+    padding-left: 30px;
+    margin-left: 60px;
+    margin-top: -60px;
+    flex-wrap: nowrap;
+}
+
+.intro {
+    display: flex;
+    font-size: 16.5px;
+    margin-left: 95px;
+    margin-top: -30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 530;
+    flex-wrap: nowrap;
+}
+
 .personal-info {
     display: flex;
     flex-direction: column;
@@ -183,7 +191,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: b;
+    font-weight: 300px;
 }
 
 .map {
@@ -205,4 +213,14 @@ body {
     height: auto;
     margin-left: 60px;
     margin-top: 0;
+}
+
+.learn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #1a1a1a;
+    font-family: 'DM Serif Text', serif;
 }
