@@ -151,10 +151,13 @@ body {
 
 .gist {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fn {
     display: flex;
+    flex-direction: column;
     font-size: 35px;
     color: #1a1a1a;
     font-family: 'Goldman', sans-serif;
@@ -166,6 +169,8 @@ body {
 
 .intro {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 16.5px;
     margin-left: 95px;
     margin-top: -30px;
