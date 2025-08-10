@@ -151,8 +151,23 @@ body {
 
 .gist {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 80px;
+    margin-top: 20px;
 }
 
 .fn {
@@ -175,7 +190,7 @@ body {
     margin-left: 95px;
     margin-top: -30px;
     font-family: 'Times New Roman', Times, serif;
-    color: white;
+    color: maroon;
     font-weight: 530;
     flex-wrap: nowrap;
 }
@@ -224,8 +239,32 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 40px;
+    font-size: 25px;
     color: #1a1a1a;
     font-family: 'DM Serif Text', serif;
+}
+
+.langs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 160px;
+    margin-top: 10px;
+    gap: 10px;
+    font-size: 18px;
+    color: #1a1a1a;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.html-icon,
+.css-icon,
+.js-icon,
+.java-icon,
+.python-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    align-items: center;
+    padding: 0;
 }
