@@ -193,6 +193,7 @@ body {
     color: maroon;
     font-weight: 530;
     flex-wrap: nowrap;
+    font-weight: bold;
 }
 
 .personal-info {
