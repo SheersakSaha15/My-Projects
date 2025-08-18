@@ -154,6 +154,18 @@ body {
     justify-content: space-between;
 }
 
+.boxbg {
+    position: absolute;
+    top: 275px;
+    left: 1045px;
+    width: 365px;
+    height: 350px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, white, lightgrey);
+    z-index: -1;
+
+}
+
 .left-side {
     display: flex;
     flex-direction: column;
@@ -166,7 +178,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 80px;
+    margin-right: 150px;
     margin-top: 20px;
 }
 
@@ -190,7 +202,7 @@ body {
     margin-left: 95px;
     margin-top: -30px;
     font-family: 'Times New Roman', Times, serif;
-    color: maroon;
+    color: navy;
     font-weight: 530;
     flex-wrap: nowrap;
     font-weight: bold;
@@ -256,6 +268,12 @@ body {
     font-size: 18px;
     color: #1a1a1a;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.langs li {
+    align-items: center;
+    line-height: 40px;
+    text-align: justify;
 }
 
 .html-icon,
