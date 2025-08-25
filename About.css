@@ -188,7 +188,7 @@ body {
     font-size: 35px;
     color: #1a1a1a;
     font-family: 'Goldman', sans-serif;
-    padding-left: 30px;
+    padding-left: 20px;
     margin-left: 60px;
     margin-top: -60px;
     flex-wrap: nowrap;
@@ -199,7 +199,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     font-size: 16.5px;
-    margin-left: 95px;
+    margin-left: 85px;
     margin-top: -30px;
     font-family: 'Times New Roman', Times, serif;
     color: navy;
