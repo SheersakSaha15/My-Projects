@@ -179,6 +179,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.contact:hover {
+    background-color: blue;
+    color: whitesmoke;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 .social-img {
     width: 35px;
     height: auto;
@@ -186,8 +193,8 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 80px;
-    margin-left: 200px;
+    gap: 90px;
+    margin-left: 205px;
     margin-top: 50px;
 }
 
