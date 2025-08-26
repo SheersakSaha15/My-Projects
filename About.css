@@ -156,7 +156,7 @@ body {
 
 .boxbg {
     position: absolute;
-    top: 275px;
+    top: 290px;
     left: 1045px;
     width: 365px;
     height: 350px;
@@ -252,7 +252,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 65px;
     font-size: 25px;
     color: #1a1a1a;
     font-family: 'DM Serif Text', serif;
