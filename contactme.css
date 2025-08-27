@@ -54,7 +54,7 @@ body {
     background: linear-gradient(to right, cornflowerblue, aqua, lightblue);
     width: 1500px;
     height: 100vh;
-    clip-path: polygon(0 0, 700px 0, 900px 100%, 0 100%);
+    clip-path: polygon(0 0, 900px 0, 1075px 100%, 0 100%);
     z-index: -5;
 }
 
@@ -110,7 +110,7 @@ body {
 
 .heading {
     display: flex;
-    font-size: 60px;
+    font-size: 55px;
     font-family: 'Goldman', sans-serif;
     padding-top: 10px;
     padding-left: 100px;
@@ -123,9 +123,23 @@ label {
     margin-top: 40px;
 }
 
+.contact-form {
+    display: flex;
+    gap: 5px;
+}
+
+.contact-form .left,
+.contact-form .right,
+.contact-form .submit-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 label[for="name-input"],
 label[for="dob"],
-label[for="email"] {
+label[for="email"],
+label[for="message"] {
     font-size: 18px;
 }
 
@@ -134,17 +148,9 @@ label[for="email"] {
     vertical-align: top;
 }
 
-input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid gray;
-    border-radius: 3px;
-    box-sizing: border-box;
-    margin-left: 150px;
-    margin-top: 5px;
-}
-
-input[type="date"] {
+input[type="text"],
+input[type="date"],
+input[type="email"] {
     width: 300px;
     padding: 10px;
     border: 2px solid gray;
@@ -155,12 +161,39 @@ input[type="date"] {
     cursor: pointer;
 }
 
-input[type="email"] {
-    width: 300px;
+textarea {
+    width: 100%;
     padding: 10px;
     border: 2px solid gray;
-    border-radius: 3px;
+    border-radius: 5px;
     box-sizing: border-box;
     margin-left: 150px;
     margin-top: 5px;
+    resize: none;
+}
+
+.submit-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    width: 100px;
+    margin-top: 275px;
+    padding: 10px 20px;
+    margin-left: 45px;
+    border: none;
+    background: navy;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+button:hover {
+    background: blue;
+    transition: 0.3 ease;
 }
