@@ -63,7 +63,7 @@ body {
     padding-left: 200px;
     padding-right: 100px;
     position: relative;
-    gap: 100px;
+    gap: 120px;
     z-index: 2;
     white-space: nowrap;
 }
@@ -121,24 +121,24 @@ body {
 }
 
 .profile-wrapper {
-    position: absolute;
+    position: relative;
     width: 250px;
     height: 250px;
     margin: 100px auto;
-    top: 150px;
-    right: 300px;
+    top: 155px;
+    right: 535px;
     transform: translateY(-50%);
     z-index: 5;
 }
 
 .circle-frame {
+    position: absolute;
     width: 450px;
     height: 450px;
     border: 5px solid;
     border-radius: 50%;
     border-width: 3px;
     overflow: hidden;
-    position: relative;
     z-index: 1;
     background-color: #e0f7fa;
     border-color: #555;
@@ -226,4 +226,35 @@ body {
 .social-icons img.fb-logo:hover,
 .social-icons img.wa-logo:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .profile-wrapper {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        top: auto;
+        right: auto;
+    }
+
+    .circle-frame {
+        position: static;
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile-image {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        top: auto;
+        left: auto;
+    }
+
+    .trapezium {
+        width: 100%;
+        height: 300px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
 }

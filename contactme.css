@@ -197,21 +197,3 @@ button:hover {
     background: blue;
     transition: 0.3 ease;
 }
-
-@media (max-width: 768px) {
-    #contact-form {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .form-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .form-row label input,
-    textarea,
-    button {
-        width: 100%;
-    }
-}
