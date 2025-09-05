@@ -279,6 +279,16 @@ body {
         margin-left: 0;
     }
 
+    .name-logo {
+        padding-left: 20px;
+    }
+
+    .name-logo .name {
+        font-size: 40px;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+
     .intro-text {
         font-size: 18px;
         margin-left: 20px;
@@ -297,7 +307,8 @@ body {
 
     .trapezium {
         height: 1500px;
-        clip-path: polygon(0 0, 500px 0, 200px 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        background: linear-gradient(to bottom, cornflowerblue, aqua, lightblue);
     }
 
     .contact {
