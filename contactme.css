@@ -202,23 +202,25 @@ button:hover {
 
 .contact-me-pic {
     position: absolute;
-    width: auto;
+    width: 50vh;
     height: auto;
     margin-top: -60px;
     margin-right: -150px;
     z-index: 2;
-    top: 40px;
-    left: 40px;
+    top: 60px;
+    left: 0px;
     image-rendering: crisp-edges;
 }
 
 .far-right-side {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 50vh;
+    height: 50vh;
     border: 5px solid;
     border-radius: 50%;
     border-width: 3px;
+    x: 200px;
+    y: 100px;
     overflow: hidden;
     z-index: 1;
     background-color: #e0f7fa;
