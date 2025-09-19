@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const port = 5000;
+require('dotenv').config();
 app.use(cors());
 app.use(bodyParser.json());
 app.post('/send-email', async (req, res) => {
@@ -11,13 +12,13 @@ app.post('/send-email', async (req, res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'sheersak.1506@gmail.com',
-            pass: 'Sheersak@15062007'
+            user: process.env.GMAIL_USER,
+            pass: process.env.GMAIL_PASS
         }
     });
     let mailOptions = {
         from: email,
-        to: 'sheersak.1506@gmail.com',
+        to: process.env.RECEIPENT_EMAIL,
         subject: `New message from ${name}`,
         text: message
     };
@@ -28,7 +29,7 @@ app.post('/send-email', async (req, res) => {
         console.error('Error sending email:', error);
         res.status(500).json({ success: false, message: 'Failed to send email' });
     }
-    app.listen(port, () => {
-        console.log(`Server running at http://localhost:${port}`);
-    });
+});
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
 });
