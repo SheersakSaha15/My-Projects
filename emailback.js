@@ -8,7 +8,7 @@ require('dotenv').config();
 app.use(cors());
 app.use(bodyParser.json());
 app.post('/send-email', async (req, res) => {
-    const { name, email, message } = req.body;
+    const { name, dob, email, message } = req.body;
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
