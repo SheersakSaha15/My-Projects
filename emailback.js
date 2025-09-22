@@ -32,4 +32,7 @@ app.post('/send-email', async (req, res) => {
 });
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
+    console.log(process.env.GMAIL_USER);
+    console.log(process.env.GMAIL_PASS);
+    console.log(process.env.RECEIPENT_EMAIL);
 });
