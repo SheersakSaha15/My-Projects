@@ -17,13 +17,20 @@ app.post('/send-email', async (req, res) => {
         }
     });
     let mailOptions = {
-        from: email,
+        from: process.env.RECEIPENT_EMAIL,
+        to: email,
+        subject: `We received your mail ${name}`,
+        text: `Hello ${name},\n\nThank you for reaching out to us. We have received your message and will get back to you shortly.\n\nBest regards,\nSherShah.`
+    };
+    let selfMailOptions = {
+        from: process.env.RECEIPENT_EMAIL,
         to: process.env.RECEIPENT_EMAIL,
         subject: `New message from ${name}`,
-        text: message
+        text: `${message}\n\nFrom: ${name}\nEmail: ${email}\nDate of Birth: ${dob}`
     };
     try {
         await transporter.sendMail(mailOptions);
+        await transporter.sendMail(selfMailOptions);
         res.json({ success: true, message: 'Email sent successfully' });
     } catch (error) {
         console.error('Error sending email:', error);
@@ -32,7 +39,4 @@ app.post('/send-email', async (req, res) => {
 });
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
-    console.log(process.env.GMAIL_USER);
-    console.log(process.env.GMAIL_PASS);
-    console.log(process.env.RECEIPENT_EMAIL);
 });
