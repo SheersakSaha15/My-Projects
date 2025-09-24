@@ -1,4 +1,5 @@
 require('dotenv').config();
+const pool = require('./db');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
