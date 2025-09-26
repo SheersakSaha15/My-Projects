@@ -23,12 +23,6 @@ app.post('/send-email', async (req, res) => {
         subject: `We received your mail ${name}`,
         text: `Hello ${name},\n\nThank you for reaching out to us. We have received your message and will get back to you shortly.\n\nBest regards,\nSherShah.`
     };
-    let selfMailOptions = {
-        from: process.env.RECEIPENT_EMAIL,
-        to: process.env.RECEIPENT_EMAIL,
-        subject: `New message from ${name}`,
-        text: `${message}\n\nFrom: ${name}\nEmail: ${email}\nDate of Birth: ${dob}`
-    };
     try {
         await transporter.sendMail(mailOptions);
         await transporter.sendMail(selfMailOptions);
@@ -37,6 +31,17 @@ app.post('/send-email', async (req, res) => {
         console.error('Error sending email:', error);
         res.status(500).json({ success: false, message: 'Failed to send email' });
     }
+});
+app.post('/api/users', (req, res) => {
+    const { name, dob, email, message } = req.body;
+    const sql = 'INSERT INTO user_details (name, dob, email, message) VALUES (?, ?, ?, ?)';
+    pool.query(sql, [name, dob, email, message], (error, results) => {
+        if (error) {
+            console.error('Error inserting user', error)
+            return res.status(500).json({ success: false, message: 'Failed to add user' })
+        }
+        res.status(201).json({ success: true, message: 'User added successfully', userId: results.insertId });
+    })
 });
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
