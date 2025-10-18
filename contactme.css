@@ -123,18 +123,21 @@ label {
     margin-top: 40px;
 }
 
+label[for="message"] {
+    margin-top: 40px;
+    margin-left: 250px;
+}
+
 .contact-form {
     display: flex;
     gap: 5px;
 }
 
 .contact-form .left-side,
-.contact-form .right-side,
-.contact-form .far-right-side,
-.contact-form .submit-container {
-    flex: 1;
+.contact-form .right-side {
     display: flex;
     flex-direction: column;
+    position: static;
 }
 
 label[for="name-input"],
@@ -159,31 +162,35 @@ input[type="email"] {
     box-sizing: border-box;
     margin-left: 150px;
     margin-top: 5px;
+    margin-right: -100px;
     cursor: pointer;
 }
 
 textarea {
-    width: 100%;
+    width: 350px;
+    height: 200px;
     padding: 10px;
     border: 2px solid gray;
     border-radius: 5px;
     box-sizing: border-box;
-    margin-left: 150px;
+    margin-left: 250px;
     margin-top: 5px;
     resize: none;
 }
 
-.submit-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+:placeholder-shown {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: darkgray;
 }
 
 button {
     width: 100px;
     margin-top: 275px;
     padding: 10px 20px;
-    margin-left: 45px;
+    margin-left: 500px;
+    text-align: center;
+    margin-top: -5px;
     border: none;
     background: navy;
     color: white;
@@ -197,32 +204,4 @@ button {
 button:hover {
     background: blue;
     transition: 0.3 ease;
-}
-
-
-.contact-me-pic {
-    position: absolute;
-    width: 50vh;
-    height: auto;
-    margin-top: -60px;
-    margin-right: -150px;
-    z-index: 2;
-    top: 60px;
-    left: 0px;
-    image-rendering: crisp-edges;
-}
-
-.far-right-side {
-    position: relative;
-    width: 50vh;
-    height: 50vh;
-    border: 5px solid;
-    border-radius: 50%;
-    border-width: 3px;
-    x: 200px;
-    y: 100px;
-    overflow: hidden;
-    z-index: 1;
-    background-color: #e0f7fa;
-    border-color: #555;
 }
