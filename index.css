@@ -102,13 +102,6 @@ body {
     width: 100%;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
 .intro-text {
     color: white;
     padding-left: 50px;
@@ -235,7 +228,7 @@ body {
     transform: scale(1.2);
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     body {
         overflow: hidden;
     }
@@ -253,10 +246,6 @@ body {
     .navlinks a {
         font-size: 16px;
         margin-left: 0;
-    }
-
-    .menu-toggle {
-        display: block;
     }
 
     .name-logo {
@@ -303,7 +292,7 @@ body {
     }
 
     .profile-wrapper {
-        display: flex;
+        display: block;
     }
 
     .circle-frame {
