@@ -25,7 +25,6 @@ app.post('/send-email', async (req, res) => {
     };
     try {
         await transporter.sendMail(mailOptions);
-        await transporter.sendMail(selfMailOptions);
         res.json({ success: true, message: 'Email sent successfully' });
     } catch (error) {
         console.error('Error sending email:', error);
