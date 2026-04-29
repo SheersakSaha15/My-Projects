@@ -1,14 +1,13 @@
 require('dotenv').config();
-const pool = require('./db');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
-app.post('/send-email', async (req, res) => {
+app.post('/api/emailback', async (req, res) => {
     const { name, dob, email, message } = req.body;
     let transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -31,17 +30,10 @@ app.post('/send-email', async (req, res) => {
         res.status(500).json({ success: false, message: 'Failed to send email' });
     }
 });
-app.post('/api/users', (req, res) => {
-    const { name, dob, email, message } = req.body;
-    const sql = 'INSERT INTO user_details (name, dob, email, message) VALUES (?, ?, ?, ?)';
-    pool.query(sql, [name, dob, email, message], (error, results) => {
-        if (error) {
-            console.error('Error inserting user', error)
-            return res.status(500).json({ success: false, message: 'Failed to add user' })
-        }
-        res.status(201).json({ success: true, message: 'User added successfully', userId: results.insertId });
-    })
-});
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`);
+    });
+}
+
+module.exports = app;
