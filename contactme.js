@@ -13,7 +13,7 @@ form.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('/api/emailback', {
+        const response = await fetch('/api/emailback.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
