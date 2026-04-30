@@ -9,6 +9,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.post('/api/emailback', async (req, res) => {
     const { name, dob, email, message } = req.body;
+    console.log("Checking Email:", process.env.GMAIL_USER ? "Found Email!" : "MISSING EMAIL!");
+    console.log("Checking Pass:", process.env.GMAIL_PASS ? "Found Pass!" : "MISSING PASS!");
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
