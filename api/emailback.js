@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
-app.post('/api/emailback', async (req, res) => {
+app.post('/api/emailback.js', async (req, res) => {
     const { name, dob, email, message } = req.body;
     let transporter = nodemailer.createTransport({
         service: 'gmail',
