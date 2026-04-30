@@ -11,8 +11,10 @@ app.post('/api/emailback', async (req, res) => {
     const { name, dob, email, message } = req.body;
     console.log("Checking Email:", process.env.GMAIL_USER ? "Found Email!" : "MISSING EMAIL!");
     console.log("Checking Pass:", process.env.GMAIL_PASS ? "Found Pass!" : "MISSING PASS!");
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, // This forces a secure SSL connection
         auth: {
             user: process.env.GMAIL_USER,
             pass: process.env.GMAIL_PASS
