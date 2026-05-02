@@ -279,7 +279,7 @@ body {
         bottom: 0 !important;
         right: 0 !important;
         height: 1450px !important;
-        width: 2100px !important;
+        width: 450px !important;
         z-index: 0 !important;
         display: flex !important;
         background-color: transparent !important;
@@ -301,9 +301,11 @@ body {
         position: static;
         display: block;
         visibility: visible;
-        padding-top: 35px;
+        padding-top: 65px;
+        padding-left: -20px;
         height: auto;
         z-index: -90;
+        opacity: 0.75;
     }
 
     /* 5. Header & Logo Positioning */
@@ -316,7 +318,7 @@ body {
     }
 
     .name-logo .name {
-        font-size: 42.5px;
+        font-size: 30px;
         margin-top: 10px;
         margin-left: 0;
         margin-right: 0;
@@ -328,31 +330,31 @@ body {
         margin: 0;
         margin-left: 5px;
         margin-top: -10px;
-        font-size: 55px;
+        font-size: 45px;
     }
 
     /* 6. Text Formatting (Left aligned, positioned over the chest) */
     .intro {
-        margin-top: -240px;
+        margin-top: -200px;
         text-align: center;
     }
 
     .intro-text {
         margin: 0;
         padding: 0;
-        font-size: 30px;
+        font-size: 22.5px;
         line-height: 1.2;
     }
 
     .fn {
-        font-size: 50px;
+        font-size: 40px;
         white-space: normal;
         /* Allows your name to wrap cleanly */
     }
 
     .button {
         margin-top: 40px;
-        margin-left: 130px;
+        margin-left: 110px;
     }
 
     .contact {
@@ -364,7 +366,7 @@ body {
 
     .social-icons {
         margin-top: 40px;
-        margin-left: 125px;
+        margin-left: 110px;
         padding: 0;
         gap: 25px;
         flex-direction: row;
@@ -391,7 +393,7 @@ body {
         position: absolute;
         top: 32px;
         right: 25px;
-        font-size: 30px;
+        font-size: 20px;
         z-index: 100;
         color: #1a1a1a;
     }
