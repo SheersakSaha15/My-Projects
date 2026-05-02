@@ -19,8 +19,8 @@
     </head>
     <body>
         <div class="navbar">
+            <div class="trapezium"></div>
             <div class="wrapper">
-                <div class="trapezium"></div>
                 <div class="name-logo">
                     <h1 class="name">SherShah</h1>
                     <h2 class="dot">.</h2>
@@ -52,6 +52,9 @@
                     </a>
                 </div>
             </div>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
             <div class="navlinks" id="navlinks">
                 <a href="#">Home</a>
                 <a href="about.html">About</a>
@@ -59,9 +62,16 @@
             </div>
             <div class="profile-wrapper">
                 <div class="circle-frame">
-                    <img src="Images/Website portfolio image (bg removed).jpeg" alt="My Profile Picture" class="profile-image">
+                    <img src="Images/profile-pic.jpeg" alt="My Profile Picture" class="profile-image">
                 </div>
             </div>
         </div>
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navlinks = document.getElementById('navlinks');
+            hamburger.addEventListener('click', () => {
+                navlinks.classList.toggle('active');
+            });
+        </script>
     </body>
 </html>
